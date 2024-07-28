@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hello!</h1>
+            <p>Excited to help you! Don't hesitate to ask anything that comes to mind</p>
+        </header>
+        <div class="options">
+            <div class="card">
+                <h2>Personal details</h2>
+                <button onclick="showMessage('How do I update my personal details?')">How do I update my personal details?</button>
+                <button onclick="showMessage('How do I update my profile photo?')">How do I update my profile photo?</button>
+                <button onclick="showMessage('How do I change my phone number?')">How do I change my phone number?</button>
+            </div>
+            <div class="card">
+                <h2>Attendance</h2>
+                <button onclick="showMessage('What is my attendance percentage?')">What is my attendance percentage?</button>
+                <button onclick="showMessage('How many hours was I absent for?')">How many hours was I absent for?</button>
+                <button onclick="showMessage('See my attendance for [course name]')">See my attendance for [course name]</button>
+            </div>
+            <div class="card">
+                <h2>Fee details</h2>
+                <button onclick="showMessage('Where do I pay my fees?')">Where do I pay my fees?</button>
+                <button onclick="showMessage('What payment methods can I use to pay my tuition and fees?')">What payment methods can I use to pay my tuition and fees?</button>
+                <button onclick="showMessage('Can I see the university\'s policy on tuition and fees?')">Can I see the university's policy on tuition and fees?</button>
+            </div>
+        </div>
+        <div class="chatbox">
+            <input type="text" id="userInput" placeholder="Start typing" onkeypress="sendMessage(event)">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
